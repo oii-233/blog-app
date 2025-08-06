@@ -7,7 +7,7 @@ import BlogDetails from "./pages/BlogDetails";
 import Bookmarks from "./pages/Bookmarks";
 import BlogForm from "./components/BlogForm";
 import { blogData } from "./data/constant";
-
+import About from "./pages/About";
 function App() {
   const [blogs, setBlogs] = useState(blogData);
   const [bookmarks, setBookmarks] = useState([]);
@@ -69,6 +69,10 @@ function App() {
           path="/edit/:id"
           element={<BlogForm blogs={blogs} updateBlog={updateBlog} />}
         />
+        <Route
+          path="/about"
+          element={<About/>}
+          />
       </Routes>
       <Footer />
     </Router>
